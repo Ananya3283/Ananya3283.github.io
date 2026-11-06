@@ -4,6 +4,7 @@ import { Hero } from "@/components/hero";
 import { Stats } from "@/components/stats";
 import { Featured } from "@/components/featured";
 import { WorkGrid } from "@/components/work-grid";
+import { Pipeline } from "@/components/pipeline";
 import { Reveal } from "@/components/reveal";
 import { CopyEmail } from "@/components/copy-email";
 import { certifications, education, experience, person, skills } from "@/content";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <Featured />
+        <Pipeline />
         <WorkGrid />
 
         <section id="experience" className="mx-auto max-w-6xl px-4 pt-32 sm:px-6">

@@ -38,6 +38,27 @@ export const featured = {
   ],
 };
 
+export const pipeline = {
+  title: "Uber and Lyft trips, from raw files to a tested star schema",
+  summary:
+    "A monthly batch ELT pipeline on NYC TLC trip data. Airflow runs it in Docker; GitHub Actions tests every push.",
+  repo: "https://github.com/Ananya3283/ride-sharing-elt",
+  walkthrough: "https://github.com/Ananya3283/ride-sharing-elt/blob/main/docs/WALKTHROUGH.md",
+  stack: ["Python", "PySpark", "S3", "PostgreSQL", "dbt", "Airflow", "Docker", "GitHub Actions"],
+  stages: [
+    { name: "Extract", text: "Monthly TLC Parquet into the lake's raw zone", tool: "Python, S3" },
+    { name: "Transform", text: "Types, validation, de-duplication and a SHA-256 trip id", tool: "PySpark" },
+    { name: "Load", text: "Each month swapped into Postgres in one transaction", tool: "Spark JDBC, Postgres" },
+    { name: "Model", text: "Star schema and a daily company mart, guarded by data tests", tool: "dbt" },
+  ],
+  results: [
+    { value: "2,083,221", text: "trips loaded from a real two-month run" },
+    { value: "31 of 31", text: "dbt data tests passing" },
+    { value: "~4 min", text: "per month, end to end, on a laptop" },
+  ],
+  note: "Idempotent by month: re-running any month never duplicates data.",
+};
+
 export const projects = [
   {
     title: "Indian ride sharing analytics",
