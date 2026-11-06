@@ -68,10 +68,7 @@ export default function Home() {
                 <div className="mt-6 grid gap-6">
                   {education.map((e) => (
                     <div key={e.degree} className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-                      <div>
-                        <p className="font-semibold">{e.degree}</p>
-                        <p className="text-muted">{e.school}</p>
-                      </div>
+                      <p className="font-semibold">{e.degree}</p>
                       <p className="font-mono text-sm text-muted">
                         {e.dates}, {e.grade}
                       </p>

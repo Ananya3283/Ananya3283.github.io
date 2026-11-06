@@ -71,7 +71,7 @@ export const projects: {
 }[] = [
   {
     title: "Indian ride sharing analytics",
-    result: "150K bookings, 30 SQL queries with CTEs and window functions. 38% of bookings never completed; Auto drove 25% of revenue.",
+    result: "Showed that 38% of 150K bookings never completed and Auto drove 25% of revenue, by writing 30 SQL queries with CTEs and window functions.",
     stack: "Python, MySQL, Power BI",
     image: "/work/ride.png",
     repo: "https://github.com/Ananya3283/indian-ride-sharing-analytics",
@@ -80,7 +80,7 @@ export const projects: {
   },
   {
     title: "E-commerce customer segmentation",
-    result: "RFM on 502,416 transactions. Champions are 21% of customers and bring in ~57% of GBP 9.80M revenue.",
+    result: "Found that Champions, 21% of customers, bring in ~57% of GBP 9.80M revenue, by running RFM segmentation on 502,416 transactions.",
     stack: "Python, MySQL, Power BI",
     image: "/work/ecommerce.png",
     repo: "https://github.com/Ananya3283/ecommerce-customer-sales-analytics",
@@ -89,7 +89,7 @@ export const projects: {
   },
   {
     title: "Sales performance dashboard",
-    result: "Sales, profit and margin KPIs by region, category and month, with slicers.",
+    result: "Showed sales, profit and margin by region, category and month, by building a Power BI dashboard with KPI cards and slicers.",
     stack: "Power BI, Excel",
     image: "/work/sales.png",
     repo: "https://github.com/Ananya3283/Sales-Performance-Dashboard",
@@ -97,7 +97,7 @@ export const projects: {
   },
   {
     title: "Netflix catalogue EDA",
-    result: "8,800+ titles: content growth over time, top genres, ratings, movies vs TV shows.",
+    result: "Mapped content growth, top genres, ratings and movies vs TV shows across 8,800+ titles, by running an EDA in Pandas.",
     stack: "Python, Pandas, Matplotlib",
     image: "/work/netflix.png",
     repo: "https://github.com/Ananya3283/Netflix-Data-Analysis",
@@ -106,7 +106,7 @@ export const projects: {
   },
   {
     title: "MovieLens SQL analysis",
-    result: "Most-rated and top-rated movies (minimum 5 ratings) and genre performance.",
+    result: "Ranked the most-rated and top-rated movies (minimum 5 ratings) and genre performance, by joining movie and rating tables in SQL.",
     stack: "SQL, MySQL Workbench",
     image: "/work/movielens.png",
     repo: "https://github.com/Ananya3283/MovieLens-SQL-Analysis",
@@ -120,10 +120,10 @@ export const experience = {
   about: "D2C skincare startup, Delhi",
   dates: "Nov 2023 - Jul 2024",
   points: [
-    { lead: "Automated reporting.", text: "Built Power Query pipelines merging sales, inventory and order sheets into one auto-refreshing monthly report, replacing manual consolidation." },
-    { lead: "250+ orders a month.", text: "Monthly sales analysis across 4 products, giving founders product- and channel-level insight for restock, pricing and promotions." },
-    { lead: "2,000+ units.", text: "Ran inventory end to end: inward and outward logging, reorder levels and monthly reconciliation." },
-    { lead: "2.5x followers.", text: "Led growth across Instagram and offline channels at 12% month over month, with A/B tests on creatives tied back to sales." },
+    { lead: "Automated reporting.", text: "Replaced manual monthly consolidation with one auto-refreshing report, by building Power Query pipelines that merge sales, inventory and order sheets." },
+    { lead: "250+ orders a month.", text: "Informed founders' restock, pricing and promotion calls with product- and channel-level insight across 4 products, by running a monthly sales analysis." },
+    { lead: "2,000+ units.", text: "Kept stock reconciled every month, by running inventory end to end: inward and outward logging and reorder levels." },
+    { lead: "2.5x followers.", text: "Grew followers at 12% month over month, by leading growth across Instagram and offline channels and A/B testing creatives against sales." },
   ],
 };
 
@@ -135,8 +135,8 @@ export const skills = [
 ];
 
 export const education = [
-  { degree: "M.Sc. Data Science", school: "Chandigarh University", dates: "2023 - 2025", grade: "CGPA 8" },
-  { degree: "B.Sc. (Hons.) Mathematics", school: "Graphic Era Hill University, Dehradun", dates: "2020 - 2023", grade: "CGPA 7.5" },
+  { degree: "M.Sc. Data Science", dates: "2023 - 2025", grade: "CGPA 8" },
+  { degree: "B.Sc. (Hons.) Mathematics", dates: "2020 - 2023", grade: "CGPA 7.5" },
 ];
 
 export const certifications = [
