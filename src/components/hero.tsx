@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { ArrowDownIcon, DownloadSimpleIcon } from "@phosphor-icons/react";
+import { ArrowDownIcon, FileTextIcon } from "@phosphor-icons/react";
 import { person } from "@/content";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -35,10 +35,11 @@ export function Hero() {
           </a>
           <a
             href={person.resume}
-            download
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 font-medium transition-[background-color,scale] duration-[var(--duration-fast)] hover:bg-surface active:scale-[0.97]"
           >
-            <DownloadSimpleIcon size={16} weight="bold" />
+            <FileTextIcon size={16} weight="bold" />
             Resume
           </a>
         </div>

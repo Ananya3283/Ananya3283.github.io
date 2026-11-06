@@ -2,11 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { ArrowUpRightIcon } from "@phosphor-icons/react";
+import { ArrowUpRightIcon, GithubLogoIcon, NotebookIcon } from "@phosphor-icons/react";
 import { projects } from "@/content";
 
 // 5 projects, 5 cells: two wide on top, three below.
 const spans = ["lg:col-span-4", "lg:col-span-2", "lg:col-span-2", "lg:col-span-2", "lg:col-span-2"];
+
+const pill =
+  "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-[background-color,scale,opacity] duration-[var(--duration-fast)] active:scale-[0.97]";
 
 export function WorkGrid() {
   return (
@@ -24,12 +27,7 @@ export function WorkGrid() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: (i % 3) * 0.04, ease: [0.22, 1, 0.36, 1] }}
           >
-            <a
-              href={p.href}
-              target="_blank"
-              rel="noreferrer"
-              className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface transition-[border-color,scale] duration-[var(--duration-fast)] ease-smooth-out hover:border-accent/40 active:scale-[0.99]"
-            >
+            <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface transition-[border-color] duration-[var(--duration-fast)] ease-smooth-out hover:border-accent/40">
               <div className={`relative overflow-hidden border-b border-border ${i === 0 ? "aspect-[16/8]" : "aspect-[16/10]"}`}>
                 <Image
                   src={p.image}
@@ -40,19 +38,29 @@ export function WorkGrid() {
                 />
               </div>
               <div className="flex flex-1 flex-col p-5">
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-display text-lg leading-snug font-semibold tracking-tight">{p.title}</h3>
-                  <ArrowUpRightIcon
-                    size={18}
-                    weight="bold"
-                    aria-hidden
-                    className="mt-1 shrink-0 text-muted transition-[translate,color] duration-[var(--duration-fast)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
-                  />
-                </div>
+                <h3 className="font-display text-lg leading-snug font-semibold tracking-tight">{p.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{p.result}</p>
                 <p className="mt-auto pt-4 font-mono text-xs text-muted">{p.stack}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {p.live && (
+                    <a href={p.live} target="_blank" rel="noreferrer" className={`${pill} group/l bg-fg text-bg hover:opacity-90`}>
+                      Live dashboard
+                      <ArrowUpRightIcon size={12} weight="bold" className="transition-transform duration-[var(--duration-fast)] group-hover/l:translate-x-0.5 group-hover/l:-translate-y-0.5" />
+                    </a>
+                  )}
+                  {p.notebook && (
+                    <a href={p.notebook} target="_blank" rel="noreferrer" className={`${pill} ring-1 ring-border hover:bg-bg`}>
+                      <NotebookIcon size={14} weight="bold" />
+                      Notebook
+                    </a>
+                  )}
+                  <a href={p.repo} target="_blank" rel="noreferrer" className={`${pill} ring-1 ring-border hover:bg-bg`}>
+                    <GithubLogoIcon size={14} weight="bold" />
+                    GitHub
+                  </a>
+                </div>
               </div>
-            </a>
+            </article>
           </motion.li>
         ))}
       </ul>

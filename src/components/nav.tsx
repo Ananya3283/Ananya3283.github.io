@@ -76,7 +76,8 @@ export function Nav() {
           <ThemeToggle />
           <a
             href={person.resume}
-            download
+            target="_blank"
+            rel="noreferrer"
             className="ml-1 rounded-full border border-border px-4 py-2 text-sm font-medium transition-[background-color,scale] duration-[var(--duration-fast)] hover:bg-surface active:scale-[0.97]"
           >
             Resume

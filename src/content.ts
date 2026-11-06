@@ -59,41 +59,53 @@ export const pipeline = {
   note: "Idempotent by month: re-running any month never duplicates data.",
 };
 
-export const projects = [
+// live: a hosted dashboard (Power BI "Publish to web" or a web build), added when one exists.
+export const projects: {
+  title: string;
+  result: string;
+  stack: string;
+  image: string;
+  repo: string;
+  notebook?: string;
+  live?: string;
+}[] = [
   {
     title: "Indian ride sharing analytics",
     result: "150K bookings, 30 SQL queries with CTEs and window functions. 38% of bookings never completed; Auto drove 25% of revenue.",
     stack: "Python, MySQL, Power BI",
     image: "/work/ride.png",
-    href: "https://github.com/Ananya3283/indian-ride-sharing-analytics",
+    repo: "https://github.com/Ananya3283/indian-ride-sharing-analytics",
+    notebook: "https://nbviewer.org/github/Ananya3283/indian-ride-sharing-analytics/blob/main/python/ride_analytics.ipynb",
   },
   {
     title: "E-commerce customer segmentation",
     result: "RFM on 502,416 transactions. Champions are 21% of customers and bring in ~57% of GBP 9.80M revenue.",
     stack: "Python, MySQL, Power BI",
     image: "/work/ecommerce.png",
-    href: "https://github.com/Ananya3283/ecommerce-customer-sales-analytics",
+    repo: "https://github.com/Ananya3283/ecommerce-customer-sales-analytics",
+    notebook: "https://nbviewer.org/github/Ananya3283/ecommerce-customer-sales-analytics/blob/main/03_Customer_Analytics.ipynb",
   },
   {
     title: "Sales performance dashboard",
     result: "Sales, profit and margin KPIs by region, category and month, with slicers.",
     stack: "Power BI, Excel",
     image: "/work/sales.png",
-    href: "https://github.com/Ananya3283/Sales-Performance-Dashboard",
+    repo: "https://github.com/Ananya3283/Sales-Performance-Dashboard",
   },
   {
     title: "Netflix catalogue EDA",
     result: "8,800+ titles: content growth over time, top genres, ratings, movies vs TV shows.",
     stack: "Python, Pandas, Matplotlib",
     image: "/work/netflix.png",
-    href: "https://github.com/Ananya3283/Netflix-Data-Analysis",
+    repo: "https://github.com/Ananya3283/Netflix-Data-Analysis",
+    notebook: "https://nbviewer.org/github/Ananya3283/Netflix-Data-Analysis/blob/main/Netflix_data_analysis.ipynb",
   },
   {
     title: "MovieLens SQL analysis",
     result: "Most-rated and top-rated movies (minimum 5 ratings) and genre performance.",
     stack: "SQL, MySQL Workbench",
     image: "/work/movielens.png",
-    href: "https://github.com/Ananya3283/MovieLens-SQL-Analysis",
+    repo: "https://github.com/Ananya3283/MovieLens-SQL-Analysis",
   },
 ];
 

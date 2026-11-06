@@ -75,7 +75,7 @@ export function Pipeline() {
           className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-[background-color,scale] duration-[var(--duration-fast)] hover:bg-surface active:scale-[0.97]"
         >
           <GithubLogoIcon size={16} weight="bold" />
-          Source
+          GitHub
         </a>
         <a
           href={pipeline.walkthrough}
