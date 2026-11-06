@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ananya Rawat | Data Analyst",
     description: "SQL, Python and Power BI case studies.",
-    images: ["/work/hr-overview.png"],
+    images: ["/work/story-who.png"],
   },
 };
 

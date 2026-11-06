@@ -61,10 +61,10 @@ export function Hero() {
           className="relative w-[88%] overflow-hidden rounded-xl border border-border bg-surface shadow-[0_30px_70px_-25px_oklch(0.3_0.02_260/0.45)]"
         >
           <Image
-            src="/work/hr-overview.png"
-            alt="HR attrition dashboard in Power BI: 1,470 employees, 237 leavers, 16.1% attrition, with attrition by department, job role and tenure"
-            width={1324}
-            height={742}
+            src="/work/story-who.png"
+            alt="Power BI story report: 237 of 1,470 people left, shown as one dot per employee by department, beside attrition by job role, age and tenure"
+            width={1166}
+            height={643}
             priority
             className="h-auto w-full"
           />

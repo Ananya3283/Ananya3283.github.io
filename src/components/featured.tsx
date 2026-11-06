@@ -42,7 +42,7 @@ export function Featured() {
       </Reveal>
 
       <Reveal delay={0.05} className="mt-12">
-        <div role="tablist" aria-label="Dashboard pages" className="inline-flex flex-wrap gap-1 rounded-full border border-border bg-surface p-1">
+        <div role="tablist" aria-label="Dashboard pages" className="inline-flex max-w-full gap-1 overflow-x-auto rounded-full border border-border bg-surface p-1 [scrollbar-width:none]">
           {featured.views.map((v) => {
             const active = v.id === view.id;
             return (
@@ -53,7 +53,7 @@ export function Featured() {
                 aria-selected={active}
                 aria-controls="featured-panel"
                 onClick={() => setView(v)}
-                className={`relative rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-[var(--duration-fast)] ${active ? "text-fg" : "text-muted hover:text-fg"}`}
+                className={`relative shrink-0 rounded-full px-3 py-1.5 sm:px-4 text-sm font-medium transition-colors duration-[var(--duration-fast)] ${active ? "text-fg" : "text-muted hover:text-fg"}`}
               >
                 {active && (
                   <motion.span
@@ -71,7 +71,7 @@ export function Featured() {
         <div
           id="featured-panel"
           role="tabpanel"
-          className="relative mt-4 aspect-[1324/742] overflow-hidden rounded-xl border border-border bg-surface"
+          className="relative mt-4 aspect-[1166/643] overflow-hidden rounded-xl border border-border bg-surface"
         >
           <AnimatePresence initial={false}>
             <motion.div
@@ -84,7 +84,7 @@ export function Featured() {
             >
               <Image
                 src={view.src}
-                alt={`HR attrition dashboard, ${view.label.toLowerCase()} page`}
+                alt={`HR attrition story report in Power BI, "${view.label}" page`}
                 fill
                 sizes="(min-width: 1152px) 1104px, 100vw"
                 className="object-cover"

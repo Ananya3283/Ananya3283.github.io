@@ -19,14 +19,14 @@ export const stats = [
 export const featured = {
   title: "HR attrition: why a blanket raise can't pay for itself",
   summary:
-    "A 3-page Power BI report and 16 SQL queries on 1,470 employees. 30 DAX measures, a metric switch and a what-if on raise cost against attrition cost.",
+    "A story-style Power BI report on 1,470 employees: one dot per person, chart titles written in DAX that state the finding, and a what-if on whether a raise pays off.",
   live: "https://ananya3283.github.io/HR-Analytics-Dashboard/",
   repo: "https://github.com/Ananya3283/HR-Analytics-Dashboard",
   stack: ["Power BI", "DAX", "Power Query", "MySQL"],
   views: [
-    { id: "overview", label: "Overview", src: "/work/hr-overview.png" },
-    { id: "drivers", label: "Drivers", src: "/work/hr-drivers.png" },
-    { id: "pay", label: "Compensation", src: "/work/hr-compensation.png" },
+    { id: "who", label: "Who leaves", src: "/work/story-who.png" },
+    { id: "why", label: "Why they leave", src: "/work/story-why.png" },
+    { id: "cost", label: "What it costs", src: "/work/story-cost.png" },
   ],
   findings: [
     { value: "2.9x", text: "Staff on overtime leave 2.9x as often (30.5% vs 10.4%)." },
