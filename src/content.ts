@@ -59,7 +59,7 @@ export const pipeline = {
   note: "Idempotent by month: re-running any month never duplicates data.",
 };
 
-// live: a hosted dashboard (Power BI "Publish to web" or a web build), added when one exists.
+// live: the interactive web dashboard deployed from each repo's web/ folder.
 export const projects: {
   title: string;
   result: string;
@@ -75,6 +75,7 @@ export const projects: {
     stack: "Python, MySQL, Power BI",
     image: "/work/ride.png",
     repo: "https://github.com/Ananya3283/indian-ride-sharing-analytics",
+    live: "https://ananya3283.github.io/indian-ride-sharing-analytics/",
     notebook: "https://nbviewer.org/github/Ananya3283/indian-ride-sharing-analytics/blob/main/python/ride_analytics.ipynb",
   },
   {
@@ -83,6 +84,7 @@ export const projects: {
     stack: "Python, MySQL, Power BI",
     image: "/work/ecommerce.png",
     repo: "https://github.com/Ananya3283/ecommerce-customer-sales-analytics",
+    live: "https://ananya3283.github.io/ecommerce-customer-sales-analytics/",
     notebook: "https://nbviewer.org/github/Ananya3283/ecommerce-customer-sales-analytics/blob/main/03_Customer_Analytics.ipynb",
   },
   {
@@ -91,6 +93,7 @@ export const projects: {
     stack: "Power BI, Excel",
     image: "/work/sales.png",
     repo: "https://github.com/Ananya3283/Sales-Performance-Dashboard",
+    live: "https://ananya3283.github.io/Sales-Performance-Dashboard/",
   },
   {
     title: "Netflix catalogue EDA",
@@ -98,6 +101,7 @@ export const projects: {
     stack: "Python, Pandas, Matplotlib",
     image: "/work/netflix.png",
     repo: "https://github.com/Ananya3283/Netflix-Data-Analysis",
+    live: "https://ananya3283.github.io/Netflix-Data-Analysis/",
     notebook: "https://nbviewer.org/github/Ananya3283/Netflix-Data-Analysis/blob/main/Netflix_data_analysis.ipynb",
   },
   {
@@ -106,6 +110,7 @@ export const projects: {
     stack: "SQL, MySQL Workbench",
     image: "/work/movielens.png",
     repo: "https://github.com/Ananya3283/MovieLens-SQL-Analysis",
+    live: "https://ananya3283.github.io/MovieLens-SQL-Analysis/",
   },
 ];
 
